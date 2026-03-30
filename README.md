@@ -16,7 +16,6 @@ Key improvements:
 • Improved CLI flow and output for all modes (run, summary, dashboard, togal, trekcho, log)
 • Preserved contemplative Tögal and Trekchö reflections while clearly framing the tool as symbolic
 
-Net result: Kairos Echo now behaves like a proper, reproducible research/prototype tool — safe, inspectable, and ready for GitHub publication and local experimentation.
 # Kairos Echo — Python Coherence Simulator with Tögal & Trekchö Reflections
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
