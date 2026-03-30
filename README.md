@@ -1,3 +1,22 @@
+Harden Kairos Echo into a reproducible CLI coherence simulator with validated config, resettable state, dashboard export, and stable JSON logging
+
+This commit upgrades Kairos Echo from a poetic prototype into a clean, release-ready single-file simulator focused on reproducibility, safety, and usability.
+
+Key improvements:
+• Added SimulationConfig dataclass with full defensive validation
+• Added RunSummary dataclass for structured reporting
+• Split action typing (InputActionType vs RecordedActionType)
+• Hardened step() with explicit input validation
+• Implemented deterministic reset() with RNG reseeding for true repeatable reruns
+• Added run(reset=True) for predictable execution
+• Added guards against empty history for summary, plotting, and export
+• Made Plotly import lazy (non-dashboard modes no longer require it)
+• Added optional HTML dashboard export via --save-html
+• Fixed JSON serialization to preserve boolean values correctly
+• Improved CLI flow and output for all modes (run, summary, dashboard, togal, trekcho, log)
+• Preserved contemplative Tögal and Trekchö reflections while clearly framing the tool as symbolic
+
+Net result: Kairos Echo now behaves like a proper, reproducible research/prototype tool — safe, inspectable, and ready for GitHub publication and local experimentation.
 # Kairos Echo — Python Coherence Simulator with Tögal & Trekchö Reflections
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
