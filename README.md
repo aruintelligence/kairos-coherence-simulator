@@ -1,61 +1,51 @@
-Harden Kairos Echo into a reproducible CLI coherence simulator with validated config, resettable state, dashboard export, and stable JSON logging
+# Kairos Coherence Simulator
 
-This commit upgrades Kairos Echo from a poetic prototype into a clean, release-ready single-file simulator focused on reproducibility, safety, and usability.
+A reproducible Python simulator for exploring coherence dynamics, ethical guardrails, and contemplative reflection.
 
-Key improvements:
-• Added SimulationConfig dataclass with full defensive validation
-• Added RunSummary dataclass for structured reporting
-• Split action typing (InputActionType vs RecordedActionType)
-• Hardened step() with explicit input validation
-• Implemented deterministic reset() with RNG reseeding for true repeatable reruns
-• Added run(reset=True) for predictable execution
-• Added guards against empty history for summary, plotting, and export
-• Made Plotly import lazy (non-dashboard modes no longer require it)
-• Added optional HTML dashboard export via --save-html
-• Fixed JSON serialization to preserve boolean values correctly
-• Improved CLI flow and output for all modes (run, summary, dashboard, togal, trekcho, log)
-• Preserved contemplative Tögal and Trekchö reflections while clearly framing the tool as symbolic
+[![Python](https://img.shields.io/badge/Python-3.8+-2563eb?style=flat-square&logo=python)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+[![Repository stars](https://img.shields.io/github/stars/aruintelligence/kairos-coherence-simulator?style=flat-square)](https://github.com/aruintelligence/kairos-coherence-simulator/stargazers)
 
-# Kairos Echo — Python Coherence Simulator with Tögal & Trekchö Reflections
+> **Scope:** This is a symbolic, contemplative research tool—not therapy, meditation instruction, spiritual authority, or a measurement of consciousness.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/YOURUSERNAME/kairos-echo?style=social)](https://github.com/YOURUSERNAME/kairos-echo/stargazers)
+## Features
 
-**Lightweight Python coherence simulator** blending stochastic dynamics, ethical "guardian veto" guardrails, and gentle **Dzogchen-inspired** contemplative reflections (Tögal & Trekchö).
+- Seeded, reproducible stochastic simulations
+- Validated configuration and resettable state
+- Coherence, distortion, and stability trajectories
+- Guardian Veto™ guardrail behavior
+- CLI modes for simulation, summaries, logs, and reflections
+- Optional Plotly dashboard and HTML export
+- Structured JSON output
+- Tögal- and Trekchö-inspired prompts, clearly framed as poetic reflection
 
-A poetic tool for **mindfulness**, inner awareness, and personal reflection. Features reproducible simulations, rich CLI modes, interactive Plotly dashboard, and clean JSON logging.
-
-> **Disclaimer**: This is a **poetic / contemplative reflection tool** — not literal meditation software, enlightenment training, or spiritual simulator. Use it lightly for self-observation.
-
-### ✨ Key Features
-- Fully reproducible stochastic coherence dynamics with isolated RNG & seed control
-- Ethical **guardian veto** — safely limits outward actions when coherence is low
-- Tögal stage proxy (0–4) mapped to the Four Visions with evocative reflections
-- Classic Trekchö reminders ("Short moments, many times")
-- Multiple CLI modes: `run`, `summary`, `dashboard`, `togal`, `trekcho`, `log`
-- Interactive **Plotly dashboard** with optional HTML export
-- Defensive validation, resettable state, and stable JSON symbiosis logs
-- Single-file design — minimal dependencies
-
-### 🚀 Quick Start
+## Quick start
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOURUSERNAME/kairos-echo.git
-cd kairos-echo
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run a simulation
+git clone https://github.com/aruintelligence/kairos-coherence-simulator.git
+cd kairos-coherence-simulator
 python kairos_echo.py --mode run --steps 500 --seed 42
-
-# Tögal reflection only
-python kairos_echo.py --mode togal
-
-# Interactive dashboard
-python kairos_echo.py --mode dashboard --save-html dashboard.html
-
-# Full summary with stats
 python kairos_echo.py --mode summary
+python kairos_echo.py --mode togal
+```
+
+Plotly is only required for dashboard mode:
+
+```bash
+python -m pip install plotly
+python kairos_echo.py --mode dashboard --save-html dashboard.html
+```
+
+## Reproducibility
+
+A fixed `--seed` reproduces a simulated trajectory. The resulting values describe internal simulator state; they are not clinical, psychological, scientific, or spiritual measurements.
+
+## Related projects
+
+- [Kairos Echo Reflection Tool](https://github.com/aruintelligence/kairos-echo-reflection-tool)
+- [Kairos Echo Inward Mirror](https://github.com/aruintelligence/kairos-echo-inward-mirror)
+- [ĀRU Intelligence public research](https://github.com/aruintelligence/aru-intelligence-ai)
+
+## License
+
+Released under the [MIT License](LICENSE). Dzogchen terms belong to living religious traditions and are used respectfully as inspiration, without claiming lineage or authority.
